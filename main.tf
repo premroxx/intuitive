@@ -1,3 +1,4 @@
+##Deploys VPC, Subnets, IGW, S3 Endpoint
 module "vpc-module" {
   source = "./vpc-module"
 
@@ -12,12 +13,14 @@ module "vpc-module" {
 
 }
 
+##Deploys SGs for SSH & HTTP Access
 module "sg-module" {
   source = "./sg-module"
 
   vpc_id = module.vpc-module.id
 }
 
+##Deploys 2 Nginx Servers
 module "ec2-module" {
   source = "./ec2-module"
 

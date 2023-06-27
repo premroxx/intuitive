@@ -8,11 +8,6 @@ output "public_subnet_ids" {
   description = "List of public subnet IDs"
 }
 
-output "cidr_block" {
-  value       = var.cidr_block
-  description = "The CIDR block associated with the VPC"
-}
-
 output "nat_gateway_ips" {
   value       = aws_eip.nat.*.public_ip
   description = "List of Elastic IPs associated with NAT gateways"

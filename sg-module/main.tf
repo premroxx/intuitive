@@ -1,6 +1,6 @@
-resource "aws_security_group" "http_access" {
-  name        = "http_access"
-  description = "Allow HTTP access"
+resource "aws_security_group" "http_ssh_access" {
+  name        = "http_ssh_access"
+  description = "Allow HTTP/SSH access"
   vpc_id = var.vpc_id
 
   ingress {

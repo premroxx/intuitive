@@ -26,7 +26,6 @@ resource "aws_internet_gateway" "default" {
   )
 }
 
-
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.default.id
 
@@ -88,9 +87,6 @@ resource "aws_vpc_endpoint" "s3" {
   )
 }
 
-#
-# NAT resources
-#
 resource "aws_eip" "nat" {
   count = length(var.public_subnet_cidr_blocks)
 

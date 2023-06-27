@@ -1,4 +1,4 @@
-resource "aws_instance" "webserver" {
+resource "aws_instance" "nginx" {
   count         = var.ec2_count
   ami           = var.ami_id
   instance_type = var.instance_type
